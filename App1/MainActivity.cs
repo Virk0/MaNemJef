@@ -36,8 +36,9 @@ namespace App1
         private void ButtonFourthActivity_Click(object sender, System.EventArgs e)
         {
             var fourthActivity = new Intent(this, typeof(FourthActivity));
+            var MainText = FindViewById<EditText>(Resource.Id.editText1);
 
-            fourthActivity.PutExtra("MyData", "Moi data");
+            fourthActivity.PutExtra("MyData", MainText.Text);
             StartActivity(fourthActivity);
         }
 
